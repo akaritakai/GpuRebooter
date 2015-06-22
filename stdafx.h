@@ -15,3 +15,5 @@
 #pragma comment(lib, "SetupAPI")
 
 #include <RegStr.h>
+
+#include <devguid.h>
