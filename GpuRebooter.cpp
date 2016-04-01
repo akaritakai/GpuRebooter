@@ -12,7 +12,7 @@ int _tmain(int, _TCHAR*[])
             auto hDevInfo = SetupDiGetClassDevs(&GUID_DEVCLASS_DISPLAY, REGSTR_KEY_PCIENUM, nullptr, DIGCF_PRESENT | DIGCF_ALLCLASSES);
             SP_DEVINFO_DATA deviceInfoData;
             deviceInfoData.cbSize = sizeof(SP_DEVINFO_DATA);
-            for (DWORD i = 0; SetupDiEnumDeviceInfo(hDevInfo, i, &deviceInfoData); i++)
+            for (auto i = 0; SetupDiEnumDeviceInfo(hDevInfo, i, &deviceInfoData); i++)
             {
                 SP_PROPCHANGE_PARAMS params;
                 params.ClassInstallHeader.cbSize = sizeof(SP_CLASSINSTALL_HEADER);
